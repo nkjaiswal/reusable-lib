@@ -1,0 +1,23 @@
+{
+  "name": "reusable-lib",
+  "version": "1.0.0",
+  "description": "This Repository will contain the reusable code which can be used across apps",
+  "main": "db_factory.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkjaiswal/reusable-lib.git"
+  },
+  "author": "Nishant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkjaiswal/reusable-lib/issues"
+  },
+  "homepage": "https://github.com/nkjaiswal/reusable-lib#readme",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "pg": "^7.18.2"
+  }
+}
