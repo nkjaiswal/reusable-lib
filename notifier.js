@@ -5,21 +5,21 @@ logger.level = process.env.LOG_LEVEL;
 module.exports = {
     notify: function(message){
         if (process.env.NOTIFIER=='chime'){
-            notify_chime(message);
+            notify_chime(process.env.ENVIRONMENT + ": " + message);
         }else{
             logger.log(message);
         }
     },
     notify_to_all: function(message){
         if (process.env.NOTIFIER=='chime'){
-            notify_chime("@All " + message);
+            notify_chime(process.env.ENVIRONMENT + ": " + "@All " + message);
         }else{
             logger.log(message);
         }
     },
     notify_to_online: function(message){
         if (process.env.NOTIFIER=='chime'){
-            notify_chime("@Present Members " + message);
+            notify_chime(process.env.ENVIRONMENT + ": " + "@Present Members " + message);
         }else{
             logger.log(message);
         }
