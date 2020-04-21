@@ -20,7 +20,7 @@ const fs = require('fs');
 //]
 module.exports = {
   send_mail: function (company, template_name, to, subject, param, callback) {
-    var file_name = "./mail-template/company-" + company + "/" + template_name + ".html";
+    var file_name = __dirname + "/mail-template/company-" + company + "/" + template_name + ".html";
 
     var html_content = fs.readFileSync(file_name).toString();
     for(var i=0; i<param.length; i++){
