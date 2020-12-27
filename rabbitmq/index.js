@@ -2,8 +2,6 @@ const amqp = require('amqplib/callback_api');
 const config = require("config");
 
 
-const rabbitMqConnectionString = process.env.RABBITMQ_CONNECTION_STRING || config.get("rabbit_mq_connection_string");
-
 let _connection;
 let _channel;
 let isReady = false;
