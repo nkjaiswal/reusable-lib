@@ -1,7 +1,7 @@
 const rabbitMqClient = require("./index");
 const rabbitMqClient2 = require("./index");
 
-rabbitMqClient.init()
+rabbitMqClient.init(process.env.RABBITMQ_CONNECTION_STRING || config.get("rabbit_mq_connection_string"))
 	.then(makeCalls)
 	.catch(console.log);
 

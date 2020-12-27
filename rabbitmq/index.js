@@ -9,7 +9,7 @@ let _channel;
 let isReady = false;
 
 module.exports = {
-    init: function() {
+    init: function(rabbitMqConnectionString) {
         return new Promise(function(resolve, reject) {
             amqp.connect(rabbitMqConnectionString, (connError, connection) => {
                 if (connError) {
