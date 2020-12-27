@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/nkjaiswal/reusable-lib#readme",
   "dependencies": {
+    "amqplib": "^0.6.0",
+    "config": "^3.3.3",
     "log4js": "^6.1.2",
     "mysql": "^2.18.1",
     "node-rest-client": "^3.1.0",
