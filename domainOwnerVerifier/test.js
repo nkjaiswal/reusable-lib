@@ -17,3 +17,7 @@ domainVerifier.verifyDomainOwner('nishant.soft04@gmail.com', 'careerkiran.com')
 	.catch(console.log);
 
 console.log('DomainOwnerVerifier verified');
+
+domainVerifier.verifyDomainOwner('admin@severityapp.com', 'severityapp.com')
+	.then(console.log)
+	.catch(console.log);

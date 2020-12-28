@@ -21,8 +21,9 @@ module.exports = {
 	 */
 	verifyDomainOwner: function(user, domain) {
 		const token = this.generateVerificationCode(user, domain);
+		const verificationDomain = `${token.key}.${domain}`
 		return new Promise(function(resolve, reject) {
-			dns.resolveTxt(domain, function(err, result) {
+			dns.resolveTxt(verificationDomain, function(err, result) {
 				if(err) { reject(err); return; }
 				if(!Array.isArray(result)) { reject("DNS Resulation Failed"); return; }
 
